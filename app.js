@@ -3,6 +3,7 @@ const screens = document.querySelectorAll('.screen')
 const timeList = document.querySelector('#time-list')
 const timeEl = document.querySelector('#time')
 const board = document.querySelector('#board')
+const btnRestart = document.querySelector('.time-btn__restart')
 const colors = ['#de54a6', '#de5474', '#d054de', '#9254de', '#5c54de', '#5490de', '#54ded9', '#de6a54']
 let time = 0
 let score = 0
@@ -58,6 +59,7 @@ function setTime(value) {
 
 function finishGame() {
     timeEl.parentNode.classList.add('hide')
+    btnRestart.classList.remove('hide')
     board.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`
 }
 
