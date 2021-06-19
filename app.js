@@ -63,6 +63,12 @@ function finishGame() {
     board.innerHTML = `<h1>Счет: <span class="primary">${score}</span></h1>`
 }
 
+btnRestart.addEventListener('click', restartGame)
+
+function restartGame() {
+    document.location.reload()
+}
+
 function createRandomCircle(){
     const circle = document.createElement('div')
     const size = getRandomNumber(10, 60)
